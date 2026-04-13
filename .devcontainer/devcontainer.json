@@ -1,0 +1,14 @@
+{  "name": "Full LXDE Desktop Codespace",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  "postStartCommand": "/usr/local/bin/start-desktop.sh",
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": {
+      "label": "LXDE Desktop",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "remoteUser": "vscode"
+}
